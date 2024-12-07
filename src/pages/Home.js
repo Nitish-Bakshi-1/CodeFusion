@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   const [roomId, setRoomId] = useState("");
+  const [username, setUsername] = useState("");
   const createNewRoom = (e) => {
     e.preventDefault();
     const id = uuidv4();
@@ -21,11 +22,25 @@ const Home = () => {
         <div className="logo">codefusion</div>
         <h4>Paste invitaion/ ROOM ID</h4>
         <div className="input-container">
-          <input type="text" placeholder="ROOM ID" value={roomId} />
-          <input type="text" placeholder="Username" />
+          <input
+            type="text"
+            placeholder="ROOM ID"
+            onChange={(e) => {
+              setRoomId(e.target.value);
+            }}
+            value={roomId}
+          />
+          <input
+            type="text"
+            placeholder="Username"
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            value={username}
+          />
         </div>
         <div className="btn-div">
-          <button className="btn">click</button>
+          <button className="btn">unite</button>
         </div>
         <h5>
           in case you dont have a room{" "}
