@@ -5,16 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
   > div {
     width: 45%;
-    height: 70vh;
+    height: 72vh;
     background-color: $color2;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 0 20px 0 20px;
 
     .logo {
       font-family: "Homemade Apple", serif;
@@ -57,7 +59,7 @@
         color: grey;
 
         &:focus {
-          opacity: 0.5;
+          opacity: 0.6;
         }
       }
     }
@@ -71,6 +73,24 @@
           text-decoration: underline;
         }
       }
+    }
+  }
+  .homeFooter {
+    color: $color2;
+    position: absolute;
+    bottom: 10px;
+    > a {
+      color: $color2;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    > div {
+      width: 90%;
+      height: 80vh;
     }
   }
 }
